@@ -273,7 +273,7 @@ class Chaordic_Base_Model_Checkout
                     array(
                         $item['product']['id'],
                         $item['product']['sku'],
-                        $item['product']['price'],
+                        money_format('%.2n', $item['product']['price']),
                         $item['quantity']
                     )
                 )

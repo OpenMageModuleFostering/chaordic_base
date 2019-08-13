@@ -1,21 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>Chaordic_Base</name>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <stability>stable</stability>
     <license>GPL</license>
     <channel>community</channel>
     <extends/>
     <summary>M&#xF3;dulo de integra&#xE7;&#xE3;o Chaordic.</summary>
     <description>Integra informa&#xE7;&#xF5;es da loja Magento aos servi&#xE7;os da Chaordic Systems.</description>
-    <notes>Vers&#xE3;o com suporte a recursos do produto Onsite e Search:&#xD;
- - Integra&#xE7;&#xE3;o do Loader Chaordic.&#xD;
- - Integra&#xE7;&#xE3;o dos modelos de dados de produtos, categorias, carrinho, transa&#xE7;&#xF5;es e usu&#xE1;rios.&#xD;
- - P&#xE1;gina de modelo Search.</notes>
-    <authors><author><name>Chaordic Systems</name><user>chaordic</user><email>costa@chaordicsystems.com.br</email></author></authors>
-    <date>2015-01-08</date>
-    <time>16:51:31</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="Chaordic_Base.xml" hash="c6efd2e90b8a8fc38f7ef1d92d51a57c"/></dir></target><target name="magecommunity"><dir name="Chaordic"><dir name="Base"><dir name="Block"><file name="Loader.php" hash="eca85c7647f1187b0309b5fade41dd5d"/><file name="Meta.php" hash="a63c9dcd7454c3ba7ad4a095ebe50806"/></dir><dir name="Helper"><file name="Data.php" hash="f64847c0ffa24a585837dfe19d2aba3b"/></dir><dir name="Model"><file name="Catalog.php" hash="7875b6dab0172b521b98517b0c33615c"/><file name="Checkout.php" hash="76bf634f513bc1cbddee5f7ed2493553"/><file name="Cms.php" hash="51b7f10cf52d10c7fde425ee609c4441"/><file name="Customer.php" hash="7be5f5749727be875c361c9a41504e5e"/><file name="Installment.php" hash="da2c100d8db9dd7dd5fbeb3a935c8a21"/><file name="Meta.php" hash="81fd78719a8bf3b6dbb20b716b87897c"/><file name="PaymentMethods.php" hash="2b091718ff97ec5fe0c5f81aba7c30c0"/><file name="Product.php" hash="80f4cb0cf5db13b42beb6184a6d691d4"/><file name="Search.php" hash="ca048a463d55b795305e0faea28b4301"/><file name="User.php" hash="51b39cffb0224946187af903d4f65b03"/></dir><dir name="controllers"><file name="RemoteController.php" hash="394e7eac5ef0af5608028305e29b79bf"/></dir><dir name="etc"><file name="config.xml" hash="9ca29fb667fb51df6bb5a65a55c72880"/><file name="system.xml" hash="7c1f10996ad9ed6e08d508c99888919c"/></dir><file name=".DS_Store" hash="9567c71fb3193ad25155b1c371035ddf"/></dir><file name=".DS_Store" hash="194577a7e20bdcc7afbb718f502c134c"/><file name=".gitignore" hash="2f0cd577d0e696bae6250e3681d0860a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="chaordic_base.xml" hash="82f6c382942b84eb8138b28a4da700b7"/></dir><dir name="template"><dir name="chaordic"><file name="loader.phtml" hash="934137d2ff16abcb65b7af83a5db4e98"/><file name="meta.phtml" hash="454b125a3a80151355f365a6bd91eb07"/></dir></dir></dir></dir></dir></target></contents>
+    <notes>Pequenas corre&#xE7;&#xF5;es de configura&#xE7;&#xF5;es e tratamento de pre&#xE7;os.</notes>
+    <authors><author><name>Chaordic Systems</name><user>Chaordic</user><email>costa@chaordicsystems.com</email></author></authors>
+    <date>2015-03-02</date>
+    <time>14:03:11</time>
+    <contents><target name="magecommunity"><dir name="Chaordic"><dir name="Base"><dir name="Block"><file name="Loader.php" hash="eca85c7647f1187b0309b5fade41dd5d"/><file name="Meta.php" hash="a63c9dcd7454c3ba7ad4a095ebe50806"/></dir><dir name="Helper"><file name="Data.php" hash="32bc57b7747616c8c45fb8c90ae5ff65"/></dir><dir name="Model"><file name="Catalog.php" hash="7875b6dab0172b521b98517b0c33615c"/><file name="Checkout.php" hash="952da4a2fe987d6513d183731896fe90"/><file name="Cms.php" hash="51b7f10cf52d10c7fde425ee609c4441"/><file name="Customer.php" hash="7be5f5749727be875c361c9a41504e5e"/><file name="Installment.php" hash="da2c100d8db9dd7dd5fbeb3a935c8a21"/><file name="Meta.php" hash="81fd78719a8bf3b6dbb20b716b87897c"/><file name="Paymentmethods.php" hash="2b091718ff97ec5fe0c5f81aba7c30c0"/><file name="Product.php" hash="5ecdcb6afdad38e5e62317a0350bb4b1"/><file name="Search.php" hash="ca048a463d55b795305e0faea28b4301"/><file name="User.php" hash="51b39cffb0224946187af903d4f65b03"/><file name=".DS_Store" hash="fadf2b56953105b776ac3b072c6542e6"/></dir><dir name="controllers"><file name="RemoteController.php" hash="394e7eac5ef0af5608028305e29b79bf"/></dir><dir name="etc"><file name="config.xml" hash="69e393c12ac72da1eb9261d6b8d12659"/><file name="system.xml" hash="7c1f10996ad9ed6e08d508c99888919c"/></dir><file name=".DS_Store" hash="99bf12e312859e41475ba42fd5c34216"/></dir><file name=".gitignore" hash="2f0cd577d0e696bae6250e3681d0860a"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="chaordic_base.xml" hash="82f6c382942b84eb8138b28a4da700b7"/></dir><dir name="template"><dir name="chaordic"><file name="loader.phtml" hash="934137d2ff16abcb65b7af83a5db4e98"/><file name="meta.phtml" hash="454b125a3a80151355f365a6bd91eb07"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Chaordic_Base.xml" hash="c6efd2e90b8a8fc38f7ef1d92d51a57c"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.4.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.9.0.0</max></package></required></dependencies>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

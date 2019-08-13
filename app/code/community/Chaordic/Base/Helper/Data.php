@@ -41,7 +41,7 @@ class Chaordic_Base_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getSecretKey()
     {
-        $config = Mage::getStoreConfig('chaordic_onsite/options/secret_key');
+        $config = Mage::getStoreConfig('chaordic_base/options/secret_key');
 
         if (empty($config)) {
             return null;
@@ -55,8 +55,8 @@ class Chaordic_Base_Helper_Data extends Mage_Core_Helper_Abstract
         $config = Mage::getStoreConfig('chaordic_base/methods/installment_count');
 
         if (empty($config)) {
-            $config = Mage::helper('chaordic_base/helper')->DEFAULT_INSTALLMENT_COUNT;
-            Mage::setStoreConfig('chaordic_base/methods/installment_count', $config);
+            $config = Mage::helper('chaordic_base')->DEFAULT_INSTALLMENT_COUNT;
+            self::setConfig('chaordic_base/methods/installment_count', $config);
         }
 
         return $config;
@@ -67,8 +67,8 @@ class Chaordic_Base_Helper_Data extends Mage_Core_Helper_Abstract
         $config = Mage::getStoreConfig('chaordic_base/methods/installment_price');
 
         if (empty($config)) {
-            $config = Mage::helper('chaordic_base/helper')->DEFAULT_INSTALLMENT_PRICE;
-            Mage::setStoreConfig('chaordic_base/methods/installment_price', $config);
+            $config = Mage::helper('chaordic_base')->DEFAULT_INSTALLMENT_PRICE;
+            self::setConfig('chaordic_base/methods/installment_price', $config);
         }
 
         return $config;

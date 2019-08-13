@@ -88,8 +88,8 @@ class Chaordic_Base_Model_Product
     public function getProductDeclaration(Mage_Catalog_Model_Product $product)
     {
         $helper = Mage::helper('chaordic_base');
-        $catalog = Mage::getSingleton('chaordic_onsite/catalog');
-        $model = Mage::getSingleton('chaordic_onsite/product');
+        $catalog = Mage::getSingleton('chaordic_base/catalog');
+        $model = Mage::getSingleton('chaordic_base/product');
 
         $declaration = array();
         $data = $product->getData();
@@ -202,7 +202,7 @@ class Chaordic_Base_Model_Product
     public function getProductSpecsDeclaration($product)
     {
         $helper = Mage::helper('chaordic_base');
-        $model = Mage::getSingleton('chaordic_onsite/product');
+        $model = Mage::getSingleton('chaordic_base/product');
 
         $specs = array();
         $skus = array();
@@ -283,12 +283,8 @@ class Chaordic_Base_Model_Product
              */
             $prices = $model->getProductPricesDeclaration($child);
 
-            if ($prices['price'] != $productPrice['price']) {
-                array_push($skus, array_merge($sku, $prices));
+            array_push($skus, array_merge($sku, $prices));
 
-            } else {
-                array_push($skus, $sku);
-            }
         }
 
         return array(

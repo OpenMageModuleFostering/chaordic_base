@@ -16,7 +16,7 @@
         <models>
             <chaordic_base>
                 <class>Chaordic_Base_Model</class>
-                <resourceModel>chaordic_onsite_mysql4</resourceModel>
+                <resourceModel>chaordic_base_mysql4</resourceModel>
             </chaordic_base>
             <chaordic_base_mysql4>
                 <class>Chaordic_Base_Model_Mysql4</class>
