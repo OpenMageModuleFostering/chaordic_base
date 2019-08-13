@@ -2,16 +2,27 @@
 /**
  * @category   Chaordic
  * @package    Chaordic_Base
- * @version    1.0.0
- * @copyright  Copyright (c) 2014 Chaordic Systems (http://www.chaordicsystems.com)
+ * @version    3.0.0
+ * @copyright  Copyright (c) 2016 Chaordic Systems (http://www.chaordicsystems.com)
+ * @author 	   DIV64 <suporte@div64.com>
  */
 
-$props = Mage::getSingleton('chaordic_base/meta')->getProps();
-
+$_props = $this->getCollection();
+$this->getDebug();
 ?>
 
-<?php if ( ! empty($props) ) : ?>
+<?php if ($_props->count()) : ?>
 <script type="text/javascript">
-    window.chaordic_meta = <?php echo json_encode($props) ?>;
+	window.chaordic_meta = {};
+	<?php foreach ($_props as $_prop): ?>
+	<?php $value = $_prop->getValue(); ?>
+	<?php if (is_array($value) or is_object($value)) : ?>
+	window.chaordic_meta.<?php echo $_prop->getName() ?> = <?php echo json_encode($_prop->getValue()) ?>;
+	<?php elseif (is_boolean($value) or is_numeric($value)) : ?>
+	window.chaordic_meta.<?php echo $_prop->getName() ?> = <?php echo $value ?>;
+	<?php else : ?>
+	window.chaordic_meta.<?php echo $_prop->getName() ?> = '<?php echo $value ?>';
+	<?php endif; ?>
+	<?php endforeach; ?>
 </script>
 <?php endif; ?>

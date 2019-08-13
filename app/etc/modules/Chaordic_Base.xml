@@ -4,6 +4,9 @@
         <Chaordic_Base>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Mage_Checkout />
+            </depends>
         </Chaordic_Base>
     </modules>
 </config>

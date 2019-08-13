@@ -1,13 +1,14 @@
 {
     "name": "OpenMageModuleFostering/Chaordic_Base",
     "type": "magento-module",
-    "license": "GPL",
+    "license": "OSL-v3.0",
     "homepage": "",
-    "description": "Módulo de integração Chaordic.",
+    "description": "This module automatically integrates your Store to Chaordic's personalization technology.
+",
     "authors": [
     {
-        "name": "Chaordic Systems",
-        "email": "costa@chaordicsystems.com"
+        "name": "Chaordic",
+        "email": "mauricio@chaordic.com.br"
     }
 ],
     "suggest": {
