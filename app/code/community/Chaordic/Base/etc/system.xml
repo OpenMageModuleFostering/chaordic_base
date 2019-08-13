@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <chaordic translate="label" module="chaordic_base">
+            <label>Chaordic Systems</label>
+            <sort_order>99999</sort_order>
+        </chaordic>
+    </tabs>
+
+    <sections>
+        <chaordic_base translate="label" module="chaordic_base">
+            <label>Configurar integração</label>
+            <tab>chaordic</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            
+            <groups>
+                <options translate="label">
+                    <label>Chaves de integração</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>true</expanded>
+
+                    <fields>
+                        <api_key>
+                            <label>API Key</label>
+                            <comment>Sua chave de integração com a Chaordic</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </api_key>
+                        <secret_key>
+                            <label>Secret Key</label>
+                            <comment>Chave secreta para autenticação da API Key</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </secret_key>
+                    </fields>
+                </options>
+
+                <methods translate="label">
+                    <label>Métodos de pagamento</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>true</expanded>
+
+                    <fields>
+                        <installment_count>
+                            <label>Número máximo de parcelas</label>
+                            <comment>Número máximo de parcelas disponíveis para sua loja. Desconsidere formas de pagamento, informe um número global para sua loja.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chaordic_base/installment</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </installment_count>
+                        <installment_price>
+                            <label>Valor mínimo de cada parcela</label>
+                            <comment>Valor mínimo para cada parcela. Desconsidere formas de pagamento, informe um valor global para sua loja.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </installment_price>
+
+                        <bankslip>
+                            <label>Bank Slip</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Bank Slip'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bankslip>
+                        <creditcard>
+                            <label>Credit Card</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Credit Card'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </creditcard>
+                        <bankdeposit>
+                            <label>Bank Deposit</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Bank Deposit'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bankdeposit>
+                        <money>
+                            <label>Money</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Money'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </money>
+                        <onlinepayment>
+                            <label>Online Payment</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Online Payment'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </onlinepayment>
+                        <directdebit>
+                            <label>Direct Debit</label>
+                            <comment>Selecione as formas de pagamento que correspondam ao 'Direct Debit'.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>chaordic_base/paymentmethods</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </directdebit>
+                    </fields>
+                </methods>
+
+                <search translate="label">
+                    <label>Módulo Search</label>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>true</expanded>
+                    
+                    <fields>
+                        <pageid>
+                            <label>ID da página Search</label>
+                            <comment>ID da página de estrutura do search. A página será automaticamente criada no primeiro acesso do crawler. Se a opção estiver em branco a página ainda não foi criada. Se preferir você pode informar o ID de outra página.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pageid>
+                    </fields>
+                </search>
+            </groups>
+        </chaordic_base>
+    </sections>
+</config>

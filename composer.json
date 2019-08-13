@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Chaordic_Base",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "Módulo de integração Chaordic.",
+    "authors": [
+    {
+        "name": "Chaordic Systems",
+        "email": "costa@chaordicsystems.com.br"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

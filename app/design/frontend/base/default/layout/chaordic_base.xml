@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<layout version="1.0">
+    <!-- Loader -->
+    <default>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.user">
+                <action method="setData">
+                    <name>context</name>
+                    <value>user</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+
+            <block type="chaordic_base/meta"
+                name="chaordic.meta"
+                template="chaordic/meta.phtml"
+                after="-"/>
+
+            <block type="chaordic_base/loader"
+                name="chaordic.loader"
+                template="chaordic/loader.phtml"
+                after="-" />
+        </reference>
+    </default>
+
+    <!-- Catalog -->
+    <catalog_category_default>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.catalog">
+                <action method="setData">
+                    <name>context</name>
+                    <value>catalog</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_layered>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.catalog">
+                <action method="setData">
+                    <name>context</name>
+                    <value>catalog</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </catalog_category_layered>
+
+    <catalog_product_view>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.product">
+                <action method="setData">
+                    <name>context</name>
+                    <value>product</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </catalog_product_view>
+
+    <!-- Checkout -->
+    <checkout_cart_index>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.cart">
+                <action method="setData">
+                    <name>context</name>
+                    <value>cart</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </checkout_cart_index>
+
+    <checkout_cart_configure>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.cart.configure">
+                <action method="setData">
+                    <name>context</name>
+                    <value>cart</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </checkout_cart_configure>
+
+    <checkout_onepage_index>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.checkout">
+                <action method="setData">
+                    <name>context</name>
+                    <value>checkout</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </checkout_onepage_index>
+
+    <checkout_onepage_success>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.confirmation">
+                <action method="setData">
+                    <name>context</name>
+                    <value>confirmation</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </checkout_onepage_success>
+
+    <!-- Search -->
+    <catalogsearch_result_index>
+        <reference name="head">
+            <block type="chaordic_base/meta"
+                name="chaordic.search.result">
+                <action method="setData">
+                    <name>context</name>
+                    <value>search</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </catalogsearch_result_index>
+
+    <catalogsearch_advanced_result>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.search.advancedresult">
+                <action method="setData">
+                    <name>context</name>
+                    <value>search</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </catalogsearch_advanced_result>
+
+    <!-- CMS -->
+    <cms_index_index>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.cms.home">
+                <action method="setData">
+                    <name>context</name>
+                    <value>home</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </cms_index_index>
+
+    <cms_page>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.cms.page">
+                <action method="setData">
+                    <name>context</name>
+                    <value>cms_page</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </cms_page>
+
+    <!-- Customer -->
+    <customer_account>
+        <reference name="head">
+            <block type="chaordic_base/meta" name="chaordic.customer">
+                <action method="setData">
+                    <name>context</name>
+                    <value>customer</value>
+                </action>
+                <action method="routeModel"/>
+            </block>
+        </reference>
+    </customer_account>
+
+</layout>
