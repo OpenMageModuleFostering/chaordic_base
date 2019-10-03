@@ -1,17 +1,5 @@
 {
-    "name": "OpenMageModuleFostering/Chaordic_Base",
-    "type": "magento-module",
-    "license": "OSL-v3.0",
-    "homepage": "",
-    "description": "This module automatically integrates your Store to Chaordic's personalization technology.
-",
-    "authors": [
-    {
-        "name": "Chaordic",
-        "email": "mauricio@chaordic.com.br"
-    }
-],
-    "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "keywords": [
+        "openmage-module"
+    ]
 }
